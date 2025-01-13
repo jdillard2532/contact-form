@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <title>Frontend Mentor | Contact form</title>
+    <link rel="stylesheet" href="./scss/dist/style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main>
+      <section class="container">
+        <form action="">
+          <h1>Contact Us</h1>
+          <fieldset class="contactInfo">
+            <div class="contactDiv">
+              <div>
+                <label for="firstName"
+                  >First Name <span class="green"> * </span></label
+                >
+                <input
+                  type="text"
+                  id="firstName"
+                  name="firstName"
+                  class="name"
+                />
+                <p class="error">This field is required</p>
+              </div>
+              <div>
+                <label for="lastName"
+                  >Last Name <span class="green"> * </span></label
+                >
+                <input type="text" id="lastName" name="lastName" class="name" />
+                <p class="error">This field is required</p>
+              </div>
+            </div>
+
+            <label for="email">
+              Email Address <span class="green"> * </span></label
+            >
+            <input type="email" id="email" name="email" />
+            <p class="error emailError">Please enter valid email address</p>
+          </fieldset>
+
+          <fieldset class="queryField">
+            <legend>Query Type <span class="green"> * </span></legend>
+            <div class="radioDiv">
+              <input
+                type="radio"
+                name="radio"
+                id="radio-enquiry"
+                autocomplete="off"
+                class="radioButton"
+              />
+              <label for="radio-enquiry">General Enquiry</label>
+            </div>
+            <div class="radioDiv">
+              <input
+                type="radio"
+                name="radio"
+                id="radio-request"
+                autocomplete="off"
+                class="radioButton"
+              />
+              <label for="radio-request">Support Request</label>
+            </div>
+          </fieldset>
+          <p class="error errorQuery">Please select a query type</p>
+
+          <fieldset class="messageField">
+            <label for="message">Message <span class="green">*</span></label>
+            <textarea name="message" id="inputMessage"></textarea>
+          </fieldset>
+          <p class="error messageError">This field is required</p>
+
+          <fieldset class="consentField">
+            <div>
+              <input
+                type="checkbox"
+                name="consent"
+                id="consent"
+                autocomplete="off"
+              />
+              <label for="consent">
+                I consent to being contacted by the team
+              </label>
+            </div>
+            <p class="error consentError">
+              To submit this form, please consent to being contacted
+            </p>
+            <button class="btnSubmit">Submit</button>
+          </fieldset>
+        </form>
+      </section>
+      <section>
+        <div class="success">
+          <div>
+            <img
+              src="./assets/images/icon-success-check.svg"
+              alt="check mark"
+            />
+            <p>Message Sent!</p>
+          </div>
+          <p class="successMessage">
+            Thanks for completing the form. We'll be in touch soon!
+          </p>
+        </div>
+      </section>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>

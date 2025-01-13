@@ -1,0 +1,167 @@
+form {
+  display: flex;
+  flex-direction: column;
+  padding: 2.5rem;
+  background-color: var(--white);
+  border-radius: 15px;
+  width: 100%;
+  max-width: 46rem; //736px
+  // margin: 1rem;
+  font-size: var(--fs-m);
+
+  input,
+  textarea {
+    cursor: pointer;
+    transition: all 0.3s;
+    &:hover {
+      border: 2px solid var(--green-200);
+    }
+  }
+
+  input,
+  .queryField div,
+  textarea {
+    //   outline: 1px solid var(--gray-100);
+    border: 1px solid var(--gray-100);
+    border-radius: 8px;
+    padding: 0.75rem 1.5rem 0.75rem;
+    resize: none;
+  }
+
+  textarea {
+    width: 100%;
+  }
+
+  fieldset {
+    border: none;
+    padding: 0;
+    margin-top: 1.5rem;
+  }
+  label,
+  legend {
+    padding-bottom: 1rem;
+  }
+
+  .contactInfo {
+    display: flex;
+    flex-direction: column;
+    .contactDiv {
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: 1.5rem;
+      gap: 1rem;
+      div {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+      }
+    }
+  }
+
+  .queryField {
+    display: flex;
+    gap: 1rem;
+    div {
+      display: flex;
+      align-items: center;
+      width: 50%;
+      gap: 1rem;
+      cursor: pointer;
+      transition: all 0.3s;
+      &:hover {
+        border: 2px solid var(--green-200);
+      }
+      label {
+        padding: 0;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .messageField {
+    display: flex;
+    flex-direction: column;
+  }
+  .consentField {
+    div {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      label {
+        padding: 0;
+      }
+    }
+    .btnSubmit {
+      background-color: var(--green-200);
+      width: 100%;
+      padding: 0.75rem;
+      border-radius: 8px;
+      cursor: pointer;
+      border: none;
+      color: var(--white);
+      font-weight: 700;
+      transition: all 0.7s;
+      margin-top: 1.5rem;
+
+      &:hover {
+        background-color: var(--gray-200);
+      }
+    }
+  }
+  input[type="radio"],
+  input[type="checkbox"] {
+    accent-color: var(--green-200);
+    width: 24px;
+    height: 24px;
+    margin: 0;
+  }
+}
+
+#email {
+  width: 100%;
+}
+
+.green {
+  color: var(--green-200);
+}
+
+.error {
+  font-size: var(--fs-s);
+  display: none;
+  color: var(--red);
+}
+
+.errorBorder {
+  border: 1px solid var(--red);
+}
+
+.active {
+  background-color: var(--green-100);
+}
+
+//Media Queries
+
+@media (max-width: 600px) {
+  .container {
+    margin: 1rem;
+    justify-content: flex-start;
+  }
+  form {
+    margin: 0;
+    padding: 1rem;
+    .contactInfo {
+      .contactDiv {
+        flex-wrap: wrap;
+        div {
+          width: 100%;
+        }
+      }
+    }
+    .queryField {
+      flex-wrap: wrap;
+      div {
+        width: 100%;
+      }
+    }
+  }
+}

@@ -1,0 +1,317 @@
+body {
+  font-family: var(--font-primary);
+  margin: 0;
+  background-color: var(--green-100);
+  color: var(--gray-200);
+  font-size: var(--fs-s);
+}
+
+h1 {
+  font-size: 2rem;
+  font-size: clamp(2rem, 1.1rem + 3.84vw, 3.5rem);
+  font-weight: 600;
+  color: var(--gray-200);
+  margin: 0 0 2rem 0;
+}
+
+p {
+  margin: 0;
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin-block-end: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1.1;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 5em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+:root {
+  --font-primary: "Karla", sans-serif;
+  --fs-s: 16px;
+  --fs-m: 18px;
+  --white: hsl(0, 0%, 100%);
+  --green-100: hsl(148, 38%, 91%);
+  --green-200: hsl(169, 82%, 27%);
+  --red: hsl(0, 66%, 54%);
+  --gray-100: hsl(186, 15%, 59%);
+  --gray-200: hsl(187, 24%, 22%);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  padding: 2.5rem;
+  background-color: var(--white);
+  border-radius: 15px;
+  width: 100%;
+  max-width: 46rem;
+  font-size: var(--fs-m);
+}
+form input,
+form textarea {
+  cursor: pointer;
+  transition: all 0.3s;
+}
+form input:hover,
+form textarea:hover {
+  border: 2px solid var(--green-200);
+}
+form input,
+form .queryField div,
+form textarea {
+  border: 1px solid var(--gray-100);
+  border-radius: 8px;
+  padding: 0.75rem 1.5rem 0.75rem;
+  resize: none;
+}
+form textarea {
+  width: 100%;
+}
+form fieldset {
+  border: none;
+  padding: 0;
+  margin-top: 1.5rem;
+}
+form label,
+form legend {
+  padding-bottom: 1rem;
+}
+form .contactInfo {
+  display: flex;
+  flex-direction: column;
+}
+form .contactInfo .contactDiv {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 1.5rem;
+  gap: 1rem;
+}
+form .contactInfo .contactDiv div {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+form .queryField {
+  display: flex;
+  gap: 1rem;
+}
+form .queryField div {
+  display: flex;
+  align-items: center;
+  width: 50%;
+  gap: 1rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+form .queryField div:hover {
+  border: 2px solid var(--green-200);
+}
+form .queryField div label {
+  padding: 0;
+  cursor: pointer;
+}
+form .messageField {
+  display: flex;
+  flex-direction: column;
+}
+form .consentField div {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+form .consentField div label {
+  padding: 0;
+}
+form .consentField .btnSubmit {
+  background-color: var(--green-200);
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: 8px;
+  cursor: pointer;
+  border: none;
+  color: var(--white);
+  font-weight: 700;
+  transition: all 0.7s;
+  margin-top: 1.5rem;
+}
+form .consentField .btnSubmit:hover {
+  background-color: var(--gray-200);
+}
+form input[type=radio],
+form input[type=checkbox] {
+  accent-color: var(--green-200);
+  width: 24px;
+  height: 24px;
+  margin: 0;
+}
+
+#email {
+  width: 100%;
+}
+
+.green {
+  color: var(--green-200);
+}
+
+.error {
+  font-size: var(--fs-s);
+  display: none;
+  color: var(--red);
+}
+
+.errorBorder {
+  border: 1px solid var(--red);
+}
+
+.active {
+  background-color: var(--green-100);
+}
+
+@media (max-width: 600px) {
+  .container {
+    margin: 1rem;
+    justify-content: flex-start;
+  }
+  form {
+    margin: 0;
+    padding: 1rem;
+  }
+  form .contactInfo .contactDiv {
+    flex-wrap: wrap;
+  }
+  form .contactInfo .contactDiv div {
+    width: 100%;
+  }
+  form .queryField {
+    flex-wrap: wrap;
+  }
+  form .queryField div {
+    width: 100%;
+  }
+}
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+  order: 2;
+}
+
+.success {
+  display: none;
+  background-color: var(--gray-200);
+  color: var(--white);
+  padding: 1.5rem;
+  border-radius: 15px;
+  max-width: 28.13rem;
+  margin: 0 auto;
+  order: 1;
+}
+.success div {
+  display: flex;
+  font-size: var(--fs-s);
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+.success .successMessage {
+  font-weight: 300;
+}
+
+@media (max-width: 37.5rem) {
+  main {
+    flex-direction: column;
+  }
+  .container {
+    justify-content: flex-start;
+  }
+  .success {
+    max-width: 20.44rem;
+    margin-top: 10rem;
+  }
+}/*# sourceMappingURL=style.css.map */
