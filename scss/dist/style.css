@@ -150,7 +150,7 @@ form fieldset {
 }
 form label,
 form legend {
-  padding-bottom: 1rem;
+  padding-bottom: 0.5rem;
 }
 form .contactInfo {
   display: flex;
