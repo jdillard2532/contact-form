@@ -63,6 +63,7 @@ function clearInputs() {
     });
   }
 
+  clearRadioButton();
   inputMessage.value = "";
 }
 
@@ -134,8 +135,15 @@ function showMessage() {
     form.style.margin = "0";
     consent.checked = false;
     clearInputs();
-    for (let i = 0; i < radioButton.length; i++) {
-      radioButton[i].checked = false;
+    clearRadioButton();
+    for (let i = 0; i < radioDiv.length; i++) {
+      radioDiv[i].style.backgroundColor = "var(--white)";
     }
+  }
+}
+
+function clearRadioButton() {
+  for (let i = 0; i < radioButton.length; i++) {
+    radioButton[i].checked = false;
   }
 }

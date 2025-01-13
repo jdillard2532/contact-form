@@ -18,7 +18,7 @@
   <body>
     <main>
       <section class="container">
-        <form action="">
+        <form action="/">
           <h1>Contact Us</h1>
           <fieldset class="contactInfo">
             <div class="contactDiv">
@@ -57,7 +57,6 @@
                 type="radio"
                 name="radio"
                 id="radio-enquiry"
-                autocomplete="off"
                 class="radioButton"
               />
               <label for="radio-enquiry">General Enquiry</label>
@@ -67,7 +66,6 @@
                 type="radio"
                 name="radio"
                 id="radio-request"
-                autocomplete="off"
                 class="radioButton"
               />
               <label for="radio-request">Support Request</label>
@@ -83,12 +81,7 @@
 
           <fieldset class="consentField">
             <div>
-              <input
-                type="checkbox"
-                name="consent"
-                id="consent"
-                autocomplete="off"
-              />
+              <input type="checkbox" name="consent" id="consent" />
               <label for="consent">
                 I consent to being contacted by the team
               </label>
@@ -100,7 +93,7 @@
           </fieldset>
         </form>
       </section>
-      <section>
+      <div>
         <div class="success">
           <div>
             <img
@@ -113,7 +106,7 @@
             Thanks for completing the form. We'll be in touch soon!
           </p>
         </div>
-      </section>
+      </div>
     </main>
     <script src="app.js"></script>
   </body>
