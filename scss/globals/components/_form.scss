@@ -6,7 +6,6 @@ form {
   border-radius: 15px;
   width: 100%;
   max-width: 46rem; //736px
-  // margin: 1rem;
   font-size: var(--fs-m);
 
   input,
@@ -94,7 +93,7 @@ form {
     .btnSubmit {
       background-color: var(--green-200);
       width: 100%;
-      padding: 0.75rem;
+      padding: 1.2rem;
       border-radius: 8px;
       cursor: pointer;
       border: none;

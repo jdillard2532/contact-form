@@ -8,7 +8,6 @@ body {
 
 h1 {
   font-size: 2rem;
-  font-size: clamp(2rem, 1.0999999999999999rem + 3.8400000000000003vw, 3.5rem);
   font-weight: 600;
   color: var(--gray-200);
   margin: 0 0 2rem 0;
