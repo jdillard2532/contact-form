@@ -305,6 +305,7 @@ main {
 @media (max-width: 37.5rem) {
   main {
     flex-direction: column;
+    height: auto;
   }
   .container {
     justify-content: flex-start;
