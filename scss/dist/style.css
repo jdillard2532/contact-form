@@ -306,6 +306,7 @@ main {
   main {
     flex-direction: column;
     height: auto;
+    margin: 2rem 1rem;
   }
   .container {
     justify-content: flex-start;
